@@ -1,8 +1,8 @@
 import React from "react";
 import Data from "../Data/pageData";
 import { MdOutlineExplore, MdEmojiFlags } from "react-icons/md";
-import { AiOutlineDollar } from "react-icons/ai";
-import { LightningBoltIcon } from "@heroicons/react/outline";
+import { AiOutlineProject } from "react-icons/ai";
+import { HiOutlineViewGridAdd } from "react-icons/hi";
 
 function Sidebar() {
   const linkClass = `w-full 
@@ -32,27 +32,15 @@ function Sidebar() {
         <ul>
           <a className={linkClass} href="#messages">
             <span className="text-left">
-              <MdOutlineExplore />
+              <HiOutlineViewGridAdd />
             </span>
-            <span className="mx-4 text-sm font-normal">Explore</span>
+            <span className="mx-4 text-sm font-normal">Add Project</span>
           </a>
           <a className={linkClass} href="#">
             <span className="text-left">
-              <AiOutlineDollar />
+              <AiOutlineProject />
             </span>
-            <span className="mx-4 text-sm font-normal">Economy</span>
-          </a>
-          <a className={linkClass} href="#">
-            <span className="text-left">
-              <LightningBoltIcon className="w-5 h-5" />
-            </span>
-            <span className="mx-4 text-sm font-normal">Fire Power</span>
-          </a>
-          <a className={linkClass} href="#">
-            <span className="text-left">
-              <MdEmojiFlags />
-            </span>
-            <span className="mx-4 text-sm font-normal">Democracy</span>
+            <span className="mx-4 text-sm font-normal">Projects (4)</span>
           </a>
         </ul>
       </nav>

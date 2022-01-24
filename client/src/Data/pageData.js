@@ -5,8 +5,8 @@ import { LightningBoltIcon } from "@heroicons/react/outline";
 const pageData = [
   {
     id: 0,
-    name: "country",
-    menu: ["explore", "economy", "fire power", "democracy"],
+    name: "project",
+    menu: ["add project", "messages", "", ""],
     icon: [
       <MdOutlineExplore />,
       <AiOutlineDollar />,
@@ -16,30 +16,8 @@ const pageData = [
   },
   {
     id: 1,
-    name: "stocks",
+    name: "team",
     menu: ["expl", "eco", "fire", "democ"],
-    icon: [
-      <MdOutlineExplore />,
-      <AiOutlineDollar />,
-      <LightningBoltIcon />,
-      <MdEmojiFlags />,
-    ],
-  },
-  {
-    id: 2,
-    name: "socials",
-    menu: ["exp-l", "ec-o", "fi-re", "d-emoc"],
-    icon: [
-      <MdOutlineExplore />,
-      <AiOutlineDollar />,
-      <LightningBoltIcon />,
-      <MdEmojiFlags />,
-    ],
-  },
-  {
-    id: 3,
-    name: "apps",
-    menu: ["ex.pl", "e.co", "fi.re", "d.emoc"],
     icon: [
       <MdOutlineExplore />,
       <AiOutlineDollar />,

@@ -1,10 +1,6 @@
 import React from "react";
 import Task from "../components/Task";
-import Music from "../components/Music";
-import Calender from "../components/Calender";
-import Messages from "../components/Messages";
 import Google from "../components/Google";
-import Users from "../components/Users";
 
 export default function AppArea() {
   return (
@@ -12,12 +8,9 @@ export default function AppArea() {
       <div className="flex flex-col flex-wrap sm:flex-row ">
         <div className="w-full sm:w-1/2 xl:w-1/3">
           <Google />
-          <Messages />
-          <Calender />
         </div>
         <div className="w-full sm:w-1/2 xl:w-1/3">
           <Task />
-          <Music />
         </div>
       </div>
     </div>
