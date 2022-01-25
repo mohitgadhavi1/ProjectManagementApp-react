@@ -1,6 +1,6 @@
 import React from "react";
 import Data from "../Data/pageData";
-import { MdOutlineExplore, MdEmojiFlags } from "react-icons/md";
+import { BiTask } from "react-icons/bi";
 import { AiOutlineProject } from "react-icons/ai";
 import { HiOutlineViewGridAdd } from "react-icons/hi";
 
@@ -35,6 +35,13 @@ function Sidebar() {
               <HiOutlineViewGridAdd />
             </span>
             <span className="mx-4 text-sm font-normal">Add Project</span>
+          </a>
+
+          <a className={linkClass} href="#">
+            <span className="text-left">
+              <BiTask />
+            </span>
+            <span className="mx-4 text-sm font-normal">My Tasks</span>
           </a>
           <a className={linkClass} href="#">
             <span className="text-left">
