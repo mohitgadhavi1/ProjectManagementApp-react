@@ -20,6 +20,7 @@ export default function Task() {
     e.preventDefault();
 
     setTasks([input, ...Tasks]);
+    setInput("");
   };
 
   const taskForm = () => {};
