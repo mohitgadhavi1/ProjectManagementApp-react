@@ -1,5 +1,5 @@
 import React from "react";
-import Task from "../components/Task";
+import Task from "../components/TaskApp/Task";
 import Google from "../components/Google";
 
 export default function AppArea() {
