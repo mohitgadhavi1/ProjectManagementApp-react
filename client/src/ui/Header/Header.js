@@ -5,6 +5,7 @@ import { BellIcon, MenuIcon, XIcon, moonIcon } from "@heroicons/react/outline";
 import Navigation from "./Navigation";
 import ProfileMenu from "./ProfileMenu";
 import Searchbar from "./searchbar";
+import logo from "./headerImg.svg";
 
 const user = {
   name: "Mohit Gadhavi",
@@ -41,11 +42,7 @@ export default function Header() {
                 <div className="flex items-center justify-between h-16">
                   <div className="flex items-center">
                     <div className="cursor-pointer flex-shrink-0">
-                      <img
-                        className="h-8 w-8"
-                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                        alt="Workflow"
-                      />
+                      <img className="h-8 w-8" src={logo} alt="Workflow" />
                     </div>
 
                     <Navigation />

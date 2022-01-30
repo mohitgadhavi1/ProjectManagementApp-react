@@ -11,11 +11,9 @@ function Tasklist(props) {
     return (
       <li
         key={props.Tasks.indexOf(task)}
-        className={
-          props.complete
-            ? "dark:text-gray-400"
-            : "flex items-center text-gray-600  dark:text-gray-200 justify-between py-3 border-b-2 border-gray-100 dark:border-gray-800"
-        }
+        className={`${
+          props.complete ? "dark:text-gray-400" : "dark:text-gray-200"
+        } + ${`flex items-center text-gray-600  dark:text-gray-200 justify-between py-3 border-b-2 border-gray-100 dark:border-gray-800`}`}
       >
         <div className="flex items-center justify-start text-sm">
           <span className="mx-4">02</span>
