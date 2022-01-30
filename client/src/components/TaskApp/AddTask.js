@@ -5,6 +5,9 @@ function AddTask(props) {
   return (
     <form action="">
       <input
+        placeholder="  TYPE HERE"
+        className="bg-transparent  caret-pink-500 outline-none "
+        autoFocus
         value={props.input}
         onChange={(e) => props.setInput(e.target.value)}
         type="text"
