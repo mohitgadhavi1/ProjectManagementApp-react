@@ -16,7 +16,14 @@ function Tasklist(props) {
         } + ${`flex items-center text-gray-600  dark:text-gray-200 justify-between py-3 border-b-2 border-gray-100 dark:border-gray-800`}`}
       >
         <div className="flex items-center justify-start text-sm">
-          <span className="mx-4">02</span>
+          <span className="mx-4">
+            {props.Tasks.indexOf(task) + 1 < 10 &&
+            props.Tasks.indexOf(task) + 1 > 0
+              ? 0
+              : null}
+            {""}
+            {props.Tasks.indexOf(task) + 1}
+          </span>
           <span className={props.complete ? "line-through" : ""}>{task}</span>
           <span className="lg:ml-6 ml-2 flex items-center text-gray-400 dark:text-gray-300">
             3
@@ -35,6 +42,7 @@ function Tasklist(props) {
             <IoIosCheckmarkCircleOutline className="cursor-pointer mx-4 text-gray-400 dark:text-gray-300 text-xl" />
           )}
         </span>
+        {console.log(props.Tasks.indexOf(task))}
       </li>
     );
   });
