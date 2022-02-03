@@ -7,7 +7,7 @@ import {
 import { Menu, Transition } from "@headlessui/react";
 import { BiDotsVertical } from "react-icons/bi";
 
-export default function Google() {
+export default function Project() {
   const [Highlight, setHighlight] = useState(false);
 
   const clickHandler = () => {
