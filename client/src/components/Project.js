@@ -1,8 +1,10 @@
 import React, { useState, Fragment } from "react";
+
 import {
   AiOutlineStar,
   AiTwotoneStar,
   AiFillGoogleSquare,
+  AiFillCaretDown,
 } from "react-icons/ai";
 import { Menu, Transition } from "@headlessui/react";
 import { BiDotsVertical } from "react-icons/bi";
@@ -181,6 +183,12 @@ export default function Project() {
             <h1 className="text-2xl antialiased font-bold text-gray-400">B</h1>
           </a>
         </div>
+        <span className="px-2 cursor-pointer py-1 flex w-20 mt-4 items-center text-xs rounded-md font-semibold text-yellow-500 bg-gray-800">
+          Summary
+          <span className="px-1">
+            <AiFillCaretDown />
+          </span>
+        </span>
         <span className="px-2 py-1 flex w-36 mt-4 items-center text-xs rounded-md font-semibold text-yellow-500 bg-yellow-100">
           DUE DATE : {date()}
         </span>

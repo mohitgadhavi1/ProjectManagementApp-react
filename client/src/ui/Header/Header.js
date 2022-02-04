@@ -1,5 +1,5 @@
 /* This example requires Tailwind CSS v2.0+ */
-
+import { Link } from "react-router-dom";
 import { Disclosure } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon, moonIcon } from "@heroicons/react/outline";
 import Navigation from "./Navigation";
@@ -41,9 +41,11 @@ export default function Header() {
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                   <div className="flex items-center">
-                    <div className="cursor-pointer flex-shrink-0">
-                      <img className="h-8 w-8" src={logo} alt="Workflow" />
-                    </div>
+                    <Link to="/">
+                      <div className="cursor-pointer flex-shrink-0">
+                        <img className="h-8 w-8" src={logo} alt="Workflow" />
+                      </div>
+                    </Link>
 
                     <Navigation />
                   </div>
