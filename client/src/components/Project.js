@@ -1,5 +1,5 @@
 import React, { useState, Fragment } from "react";
-
+import { IoMdAdd } from "react-icons/io";
 import {
   AiOutlineStar,
   AiTwotoneStar,
@@ -182,13 +182,34 @@ export default function Project() {
             /> */}
             <h1 className="text-2xl antialiased font-bold text-gray-400">B</h1>
           </a>
+          <a
+            href="#"
+            className="bg-gray-700 flex align-center justify-center inline-block h-10 w-10 rounded-full object-cover ring-2 ring-white"
+          >
+            {/* <img
+              className="inline-block h-10 w-10 rounded-full object-cover ring-2 ring-white"
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+              alt="Max"
+            /> */}
+            <h1 className="text-3xl antialiased place-self-center font-bold text-lime-200">
+              <IoMdAdd />
+            </h1>
+          </a>
         </div>
-        <span className="px-2 cursor-pointer py-1 flex w-20 mt-4 items-center text-xs rounded-md font-semibold text-yellow-500 bg-gray-800">
+
+        <span className="px-2 cursor-pointer  py-1 flex w-20 mt-4 items-center text-xs rounded-md font-semibold text-yellow-500 bg-gray-800">
           Summary
           <span className="px-1">
             <AiFillCaretDown />
           </span>
         </span>
+        <p className="text-gray-300">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
+          asperiores voluptatum ad! Nam praesentium ipsam, ea beatae quis
+          accusantium error quas dicta iusto. Alias et aliquam minima quod nemo
+          rerum.
+        </p>
+
         <span className="px-2 py-1 flex w-36 mt-4 items-center text-xs rounded-md font-semibold text-yellow-500 bg-yellow-100">
           DUE DATE : {date()}
         </span>

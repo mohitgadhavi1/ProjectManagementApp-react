@@ -42,7 +42,6 @@ function Tasklist(props) {
             <IoIosCheckmarkCircleOutline className="cursor-pointer mx-4 text-gray-400 dark:text-gray-300 text-xl" />
           )}
         </span>
-        {console.log(props.Tasks.indexOf(task))}
       </li>
     );
   });
