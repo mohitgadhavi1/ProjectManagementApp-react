@@ -44,7 +44,7 @@ export default function Task() {
 
         <ul className="list-disc list-inside border-gray-100 dark:border-gray-800 border-t-2 ">
           <li className="flex items-center text-gray-600  dark:text-gray-200 justify-between py-3 border-b-2 border-gray-100 dark:border-gray-800">
-            <div className="flex items-center justify-start text-sm">
+            <div className="flex items-center w-full mr-1 justify-start text-sm">
               <span className="mx-4">00</span>
               <AddTask addTask={addTask} input={input} setInput={setInput} />
             </div>
