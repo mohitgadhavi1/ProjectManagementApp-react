@@ -10,8 +10,8 @@ export default function Home() {
     <BrowserRouter>
       <div className="bg-gray-100 h-screen dark:bg-gray-800">
         <Header />
-        <main className="bg-gray-100 flex dark:bg-gray-800  h-5/6 overflow-hidden relative">
-          <div className="flex flex-col   w-max h-screen items-start justify-between">
+        <main className="bg-gray-100 flex dark:bg-gray-800  overflow-hidden relative">
+          <div className="flex flex-col  w-max h-screen items-start justify-between">
             <Sidebar />
             <Footer />
           </div>
