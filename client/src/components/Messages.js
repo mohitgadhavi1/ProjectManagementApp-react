@@ -2,11 +2,11 @@ import React from "react";
 
 export default function Messages() {
   return (
-    <div className="overflow-hidden shadow-lg  rounded-2xl  bg-white dark:bg-gray-700 h-full ">
+    <div className=" shadow-lg  rounded-2xl  bg-white dark:bg-gray-700 h-full ">
       <p className="font-bold p-2  text-md text-black border-b-2 border-gray-100 dark:border-gray-800 dark:text-white">
         Messages
       </p>
-      <ul className="overflow-auto px-2 w-full h-full ">
+      <ul className="overflow-auto px-2 w-full h-36">
         <li className="flex items-center mt-4 space-x-2">
           <a href="#" className="block relative">
             <img

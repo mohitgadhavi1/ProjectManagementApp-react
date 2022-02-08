@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment, useEffect } from "react";
 import { IoMdAdd } from "react-icons/io";
 import {
   AiOutlineStar,
@@ -8,9 +8,11 @@ import {
 } from "react-icons/ai";
 import { Menu, Transition } from "@headlessui/react";
 import { BiDotsVertical } from "react-icons/bi";
+import { MdOutlineDriveFileRenameOutline } from "react-icons/md";
 
 export default function Project() {
   const [Highlight, setHighlight] = useState(false);
+  const [logo, setLogo] = useState(true);
 
   const clickHandler = () => {
     setHighlight(!Highlight);
@@ -44,9 +46,18 @@ export default function Project() {
       <div className="shadow-lg rounded-2xl p-4 bg-white dark:bg-gray-700 w-full">
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center">
-            <span className="rounded-xl relative p-1 bg-blue-100">
-              <AiFillGoogleSquare className="text-3xl text-gray-700" />
+            <span
+              onMouseEnter={() => setLogo(false)}
+              onMouseLeave={() => setLogo(true)}
+              className="cursor-pointer rounded-xl relative p-1 bg-blue-100"
+            >
+              {logo ? (
+                <AiFillGoogleSquare className="text-3xl text-gray-700 transition duration-500 ease-in delay-75" />
+              ) : (
+                <MdOutlineDriveFileRenameOutline className="text-3xl  text-gray-700 transition duration-500 ease-in delay-75" />
+              )}
             </span>
+
             <div className="flex flex-col">
               <span className="font-bold text-md text-black dark:text-white ml-2">
                 Google
@@ -162,7 +173,7 @@ export default function Project() {
         <div className="flex -space-x-2">
           <a
             href="#"
-            className=" flex align-center justify-center inline-block h-10 w-10 rounded-full object-cover ring-2 ring-white"
+            className=" flex align-center justify-center  h-10 w-10 rounded-full object-cover ring-2 ring-white"
           >
             {/* <img
               className="inline-block h-10 w-10 rounded-full object-cover ring-2 ring-white"
@@ -173,7 +184,7 @@ export default function Project() {
           </a>
           <a
             href="#"
-            className="bg-gray-700 flex align-center justify-center inline-block h-10 w-10 rounded-full object-cover ring-2 ring-white"
+            className="bg-gray-700 flex align-center justify-center  h-10 w-10 rounded-full object-cover ring-2 ring-white"
           >
             {/* <img
               className="inline-block h-10 w-10 rounded-full object-cover ring-2 ring-white"
@@ -184,7 +195,7 @@ export default function Project() {
           </a>
           <a
             href="#"
-            className="bg-gray-700 flex align-center justify-center inline-block h-10 w-10 rounded-full object-cover ring-2 ring-white"
+            className="bg-gray-700 flex align-center justify-center  h-10 w-10 rounded-full object-cover ring-2 ring-white"
           >
             {/* <img
               className="inline-block h-10 w-10 rounded-full object-cover ring-2 ring-white"
