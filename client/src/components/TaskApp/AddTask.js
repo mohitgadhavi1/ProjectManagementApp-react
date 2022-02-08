@@ -21,7 +21,12 @@ function AddTask(props) {
         >
           <MdOutlineDone className="text-lime-500 cursor-pointer mx-4   text-xl" />
         </button>
-        <MdOutlineClose className="text-red-500 cursor-pointer   text-xl" />
+        <MdOutlineClose
+          onClick={() => {
+            props.setShowInput(false);
+          }}
+          className="text-red-500 cursor-pointer   text-xl"
+        />
       </div>
     </form>
   );
