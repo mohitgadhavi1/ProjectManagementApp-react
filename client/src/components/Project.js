@@ -13,6 +13,7 @@ import { MdOutlineDriveFileRenameOutline } from "react-icons/md";
 export default function Project() {
   const [Highlight, setHighlight] = useState(false);
   const [logo, setLogo] = useState(true);
+  const [openSummary, setOpenSummery] = useState(false);
 
   const clickHandler = () => {
     setHighlight(!Highlight);
@@ -208,19 +209,23 @@ export default function Project() {
           </a>
         </div>
 
-        <span className="px-2 cursor-pointer  py-1 flex w-20 mt-4 items-center text-xs rounded-md font-semibold text-yellow-500 bg-gray-800">
+        <span
+          onClick={() => setOpenSummery(!openSummary)}
+          className="px-2 cursor-pointer  py-1 flex w-20 mt-4 items-center text-xs rounded-md font-semibold text-yellow-500 bg-gray-800"
+        >
           Summary
           <span className="px-1">
             <AiFillCaretDown />
           </span>
         </span>
-        <p className="text-gray-300">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
-          asperiores voluptatum ad! Nam praesentium ipsam, ea beatae quis
-          accusantium error quas dicta iusto. Alias et aliquam minima quod nemo
-          rerum.
-        </p>
-
+        {openSummary && (
+          <p className="text-gray-300">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
+            asperiores voluptatum ad! Nam praesentium ipsam, ea beatae quis
+            accusantium error quas dicta iusto. Alias et aliquam minima quod
+            nemo rerum.
+          </p>
+        )}
         <span className="px-2 py-1 flex w-36 mt-4 items-center text-xs rounded-md font-semibold text-yellow-500 bg-yellow-100">
           DUE DATE : {date()}
         </span>

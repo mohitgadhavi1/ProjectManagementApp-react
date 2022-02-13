@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { BsFillPersonFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const user = {
   name: "Mohit Gadhavi",
@@ -9,9 +10,9 @@ const user = {
 };
 
 const userNavigation = [
-  { name: "Your Profile", href: "#" },
-  { name: "Settings", href: "#" },
-  { name: "Sign out", href: "#" },
+  { name: "Your Profile", href: "profile" },
+  { name: "Settings", href: "setting" },
+  { name: "Sign out", href: "auth" },
 ];
 
 function classNames(...classes) {
@@ -46,15 +47,17 @@ export default function Profile() {
           {userNavigation.map((item) => (
             <Menu.Item key={item.name}>
               {({ active }) => (
-                <a
-                  href={item.href}
-                  className={classNames(
-                    active ? "bg-gray-100" : "",
-                    "block px-4 py-2 text-sm text-gray-700"
-                  )}
-                >
-                  {item.name}
-                </a>
+                <Link to={item.href}>
+                  <a
+                    // href={item.href}
+                    className={classNames(
+                      active ? "bg-gray-100" : "",
+                      "block px-4 py-2 text-sm text-gray-700"
+                    )}
+                  >
+                    {item.name}
+                  </a>
+                </Link>
               )}
             </Menu.Item>
           ))}

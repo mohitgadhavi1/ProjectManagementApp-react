@@ -8,12 +8,12 @@ export default function Navigation() {
     <div className=" hidden md:block  ml-10 w-max">
       <ul className=" flex items-baseline space-x-4">
         {pageData.map((item) => (
-          <NavLink to={item.name}>
+          <NavLink key={item.id} to={item.name}>
             <li className="list-none" key={item.id}>
               <p
                 key={item.id}
                 className={
-                  "text-gray-300 hover:bg-gray-700 hover:text-white  px-3 py-2 rounded-md text-sm font-medium focus:bg-gray-900 text-white "
+                  "text-gray-300 hover:bg-gray-700 hover:text-white  px-3 py-2 rounded-md text-sm font-medium focus:bg-gray-900 "
                 }
               >
                 {item.name.toUpperCase()}

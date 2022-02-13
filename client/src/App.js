@@ -1,24 +1,22 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./ui/Header/Header";
-import Sidebar from "./ui/sidebar";
-import AppArea from "./ui/AppArea";
-import Footer from "./ui/Footer";
+import Home from "./pages/Home";
+import Auth from "./pages/Auth";
+import Team from "./pages/Team";
 
-export default function Home() {
+export default function App() {
   return (
     <BrowserRouter>
       <div className="bg-gray-100 h-screen dark:bg-gray-800">
         <Header />
-        <main className="bg-gray-100 flex dark:bg-gray-800  overflow-hidden relative">
-          <div className="flex flex-col  w-max h-screen items-start justify-between">
-            <Sidebar />
-            <Footer />
-          </div>
-          <div className="flex flex-col  w-full pl-0 md:p-6 md:space-y-4">
-            <AppArea />
-          </div>
-        </main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+
+          <Route path="auth" element={<Auth />} />
+
+          <Route path="team" element={<Team />} />
+        </Routes>
       </div>
     </BrowserRouter>
   );
